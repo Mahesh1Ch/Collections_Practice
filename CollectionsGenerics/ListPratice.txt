@@ -1,0 +1,44 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace CollectionsPratice
+{
+    public class Employee
+    {
+        public string EmpId { set; get; }
+        public string Name { set; get; }
+        public decimal EmpSalary { set; get; }
+
+        public Employee(string EmpId, string Name, decimal EmpSalary)
+        {
+            this.EmpId = EmpId;
+            this.Name = Name;
+            this.EmpSalary = EmpSalary;
+        }
+
+        public override string ToString()
+        {
+            return "Employee [ EmpId : "+EmpId+" Name :"+Name+" Salay : "+EmpSalary+"]";
+
+        }
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Employee> al = new List<Employee>();
+            al.Add(new Employee("AAA11","AAA",100));
+            al.Add(new Employee("BBB22","BBB",99));
+            al.Add(new Employee("CCC22","CCC",98));
+
+            foreach(Employee e in al)
+            {
+                Console.WriteLine(e);
+            }
+
+       
+        }
+    }
+}
